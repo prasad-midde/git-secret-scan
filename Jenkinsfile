@@ -3,7 +3,7 @@ pipeline {
 	stages {
 	      stage('Cloning Git') {
 	        steps {
-	              checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: '', url: 'https://github.com/prasad-midde/listing-s3-buckets.git']]])
+	              checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: '', url: 'https://github.com/prasad-midde/git-secret-scan.git']]])
 	        }
 	       }
 	    stage('git-secrets-check') {
